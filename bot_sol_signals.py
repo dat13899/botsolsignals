@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
 """
 bot_sol_signals.py
-Bot Telegram gửi tín hiệu MUA/BÁN SOL dựa trên chiến lược EMA + RSI.
-Khi kết nối Binance WebSocket thành công sẽ gửi tin nhắn xác nhận lên Telegram.
+Bot gửi tín hiệu EMA/RSI và phản hồi lệnh /gia để trả giá hiện tại SOL/USDT.
 """
 
 import os
@@ -12,13 +11,14 @@ import logging
 from collections import deque
 from datetime import datetime
 import threading
-
+import requests
 import pandas as pd
 import numpy as np
-import requests
 from websocket import WebSocketApp
+from telegram import Update
+from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
 
-# ===== Cấu hình cơ bản =====
+# ===== Cấu hình =====
 logging.basicConfig(level=logging.INFO,
                     format="%(asctime)s %(levelname)s %(message)s")
 
@@ -47,9 +47,9 @@ last_signal = None
 last_ema_short = None
 last_ema_long  = None
 
-
+# --------- Hàm tiện ích ---------
 def send_telegram(text: str):
-    """Gửi message Telegram"""
+    """Gửi message Telegram chủ động (không qua handler)."""
     try:
         r = requests.post(
             TELEGRAM_URL,
@@ -63,7 +63,6 @@ def send_telegram(text: str):
 
 
 def compute_rsi(series: pd.Series, period: int = 14) -> pd.Series:
-    """Tính RSI với phương pháp EMA"""
     delta = series.diff()
     gain = delta.clip(lower=0)
     loss = -delta.clip(upper=0)
@@ -73,6 +72,7 @@ def compute_rsi(series: pd.Series, period: int = 14) -> pd.Series:
     return 100 - 100 / (1 + rs)
 
 
+# --------- WebSocket xử lý tín hiệu ---------
 def on_message(ws, message):
     global last_signal, last_ema_short, last_ema_long
 
@@ -128,7 +128,6 @@ def on_message(ws, message):
 
 def on_open(ws):
     logging.info("✅ Kết nối Binance WebSocket thành công: %s", BINANCE_WS)
-    # Gửi thông báo Telegram khi kết nối thành công
     send_telegram("🚀 Bot SOL đã kết nối thành công tới Binance WebSocket và sẵn sàng gửi tín hiệu!")
 
 
@@ -156,14 +155,35 @@ def run_ws():
         logging.info("⏳ Reconnect sau 5 giây...")
         time.sleep(5)
 
+# --------- Lệnh Telegram: /gia ---------
+async def gia_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    """Trả về giá hiện tại SOL/USDT khi gõ /gia"""
+    try:
+        url = f"https://api.binance.com/api/v3/ticker/price?symbol=SOLUSDT"
+        r = requests.get(url, timeout=10)
+        r.raise_for_status()
+        price = float(r.json()["price"])
+        await update.message.reply_text(
+            f"💰 Giá SOL/USDT hiện tại: {price:.4f} USDT"
+        )
+    except Exception as e:
+        logging.exception("Lỗi lấy giá: %s", e)
+        await update.message.reply_text("⚠️ Không lấy được giá hiện tại.")
+
+
+def run_telegram_commands():
+    """Chạy bot Telegram để xử lý lệnh /gia"""
+    app = ApplicationBuilder().token(BOT_TOKEN).build()
+    app.add_handler(CommandHandler("gia", gia_handler))
+    app.run_polling()
+
 
 if __name__ == "__main__":
     logging.info("🚀 Bot SOL signal khởi động...")
-    t = threading.Thread(target=run_ws, daemon=True)
-    t.start()
 
-    try:
-        while True:
-            time.sleep(1)
-    except KeyboardInterrupt:
-        logging.info("Đã dừng bot.")
+    # Thread 1: WebSocket tín hiệu
+    t_ws = threading.Thread(target=run_ws, daemon=True)
+    t_ws.start()
+
+    # Thread 2: Bot Telegram cho lệnh /gia
+    run_telegram_commands()
