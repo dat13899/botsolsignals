@@ -1,0 +1,74 @@
+[
+  {
+    "SYMBOL": "SOLUSDT",
+    "INTERVAL": "1m",
+    "error": "",
+    "stdout": "Fetching 6000 candles...\nFetched 1000/6000 (16.7%)\nFetched 2000/6000 (33.3%)\nFetched 3000/6000 (50.0%)\nFetched 4000/6000 (66.7%)\nFetched 5000/6000 (83.3%)\nFetched 6000/6000 (100.0%)\n                                                            \nFetched 6000 candles.\nFolds: 3\nSaved walk-forward results -> optimize_walkforward_results.json\nBest:\n{\n  \"EMA_SHORT\": 16,\n  \"EMA_LONG\": 60,\n  \"K_SL\": 1.2,\n  \"TP_R\": 0.8,\n  \"RSI_BUY_CAP\": 60,\n  \"RSI_SELL_FLOOR\": 20,\n  \"PRICE_ABOVE_LONG_PCT\": 0.0,\n  \"PRICE_BELOW_LONG_PCT\": 0.0,\n  \"TRADE_SIDE\": \"BOTH\",\n  \"median_expectancy\": -0.7370739147799701,\n  \"median_win_rate\": 16.666666666666664,\n  \"sum_trades\": 31\n}\nBest params saved -> best_walkforward_params.json\n"
+  },
+  {
+    "SYMBOL": "SOLUSDT",
+    "INTERVAL": "3m",
+    "error": "",
+    "stdout": "Fetching 6000 candles...\nFetched 1000/6000 (16.7%)\nFetched 2000/6000 (33.3%)\nFetched 3000/6000 (50.0%)\nFetched 4000/6000 (66.7%)\nFetched 5000/6000 (83.3%)\nFetched 6000/6000 (100.0%)\n                                                            \nFetched 6000 candles.\nFolds: 3\nSaved walk-forward results -> optimize_walkforward_results.json\nBest:\n{\n  \"EMA_SHORT\": 16,\n  \"EMA_LONG\": 80,\n  \"K_SL\": 1.0,\n  \"TP_R\": 0.8,\n  \"RSI_BUY_CAP\": 60,\n  \"RSI_SELL_FLOOR\": 20,\n  \"PRICE_ABOVE_LONG_PCT\": 0.0,\n  \"PRICE_BELOW_LONG_PCT\": 0.0,\n  \"TRADE_SIDE\": \"SELL\",\n  \"median_expectancy\": -0.547789403663011,\n  \"median_win_rate\": 0.0,\n  \"sum_trades\": 13\n}\nBest params saved -> best_walkforward_params.json\n"
+  },
+  {
+    "SYMBOL": "SOLUSDT",
+    "INTERVAL": "5m",
+    "error": "",
+    "stdout": "Fetching 6000 candles...\nFetched 1000/6000 (16.7%)\nFetched 2000/6000 (33.3%)\nFetched 3000/6000 (50.0%)\nFetched 4000/6000 (66.7%)\nFetched 5000/6000 (83.3%)\nFetched 6000/6000 (100.0%)\n                                                            \nFetched 6000 candles.\nFolds: 3\nSaved walk-forward results -> optimize_walkforward_results.json\nBest:\n{\n  \"EMA_SHORT\": 12,\n  \"EMA_LONG\": 48,\n  \"K_SL\": 1.2,\n  \"TP_R\": 0.8,\n  \"RSI_BUY_CAP\": 60,\n  \"RSI_SELL_FLOOR\": 20,\n  \"PRICE_ABOVE_LONG_PCT\": 0.0,\n  \"PRICE_BELOW_LONG_PCT\": 0.0,\n  \"TRADE_SIDE\": \"BOTH\",\n  \"median_expectancy\": -0.35118814204534093,\n  \"median_win_rate\": 0.0,\n  \"sum_trades\": 25\n}\nBest params saved -> best_walkforward_params.json\n"
+  },
+  {
+    "SYMBOL": "BTCUSDT",
+    "INTERVAL": "1m",
+    "error": "",
+    "stdout": "Fetching 6000 candles...\nFetched 1000/6000 (16.7%)\nFetched 2000/6000 (33.3%)\nFetched 3000/6000 (50.0%)\nFetched 4000/6000 (66.7%)\nFetched 5000/6000 (83.3%)\nFetched 6000/6000 (100.0%)\n                                                            \nFetched 6000 candles.\nFolds: 3\nSaved walk-forward results -> optimize_walkforward_results.json\nBest:\n{\n  \"EMA_SHORT\": 16,\n  \"EMA_LONG\": 48,\n  \"K_SL\": 1.2,\n  \"TP_R\": 0.8,\n  \"RSI_BUY_CAP\": 60,\n  \"RSI_SELL_FLOOR\": 20,\n  \"PRICE_ABOVE_LONG_PCT\": 0.0,\n  \"PRICE_BELOW_LONG_PCT\": 0.0,\n  \"TRADE_SIDE\": \"BOTH\",\n  \"median_expectancy\": -2.897293065149769,\n  \"median_win_rate\": 7.6923076923076925,\n  \"sum_trades\": 34\n}\nBest params saved -> best_walkforward_params.json\n"
+  },
+  {
+    "SYMBOL": "BTCUSDT",
+    "INTERVAL": "3m",
+    "error": "",
+    "stdout": "Fetching 6000 candles...\nFetched 1000/6000 (16.7%)\nFetched 2000/6000 (33.3%)\nFetched 3000/6000 (50.0%)\nFetched 4000/6000 (66.7%)\nFetched 5000/6000 (83.3%)\nFetched 6000/6000 (100.0%)\n                                                            \nFetched 6000 candles.\nFolds: 3\nSaved walk-forward results -> optimize_walkforward_results.json\nBest:\n{\n  \"EMA_SHORT\": 12,\n  \"EMA_LONG\": 80,\n  \"K_SL\": 1.2,\n  \"TP_R\": 0.8,\n  \"RSI_BUY_CAP\": 60,\n  \"RSI_SELL_FLOOR\": 20,\n  \"PRICE_ABOVE_LONG_PCT\": 0.0,\n  \"PRICE_BELOW_LONG_PCT\": 0.0,\n  \"TRADE_SIDE\": \"BOTH\",\n  \"median_expectancy\": -1.687826015586816,\n  \"median_win_rate\": 0.0,\n  \"sum_trades\": 32\n}\nBest params saved -> best_walkforward_params.json\n"
+  },
+  {
+    "SYMBOL": "BTCUSDT",
+    "INTERVAL": "5m",
+    "error": "",
+    "stdout": "Fetching 6000 candles...\nFetched 1000/6000 (16.7%)\nFetched 2000/6000 (33.3%)\nFetched 3000/6000 (50.0%)\nFetched 4000/6000 (66.7%)\nFetched 5000/6000 (83.3%)\nFetched 6000/6000 (100.0%)\n                                                            \nFetched 6000 candles.\nFolds: 3\nSaved walk-forward results -> optimize_walkforward_results.json\nBest:\n{\n  \"EMA_SHORT\": 12,\n  \"EMA_LONG\": 48,\n  \"K_SL\": 1.2,\n  \"TP_R\": 0.8,\n  \"RSI_BUY_CAP\": 60,\n  \"RSI_SELL_FLOOR\": 20,\n  \"PRICE_ABOVE_LONG_PCT\": 0.0,\n  \"PRICE_BELOW_LONG_PCT\": 0.0,\n  \"TRADE_SIDE\": \"BUY\",\n  \"median_expectancy\": -0.826588703366475,\n  \"median_win_rate\": 0.0,\n  \"sum_trades\": 7\n}\nBest params saved -> best_walkforward_params.json\n"
+  },
+  {
+    "SYMBOL": "ETHUSDT",
+    "INTERVAL": "1m",
+    "error": "",
+    "stdout": "Fetching 6000 candles...\nFetched 1000/6000 (16.7%)\nFetched 2000/6000 (33.3%)\nFetched 3000/6000 (50.0%)\nFetched 4000/6000 (66.7%)\nFetched 5000/6000 (83.3%)\nFetched 6000/6000 (100.0%)\n                                                            \nFetched 6000 candles.\nFolds: 3\nSaved walk-forward results -> optimize_walkforward_results.json\nBest:\n{\n  \"EMA_SHORT\": 20,\n  \"EMA_LONG\": 48,\n  \"K_SL\": 1.2,\n  \"TP_R\": 0.8,\n  \"RSI_BUY_CAP\": 60,\n  \"RSI_SELL_FLOOR\": 20,\n  \"PRICE_ABOVE_LONG_PCT\": 0.0,\n  \"PRICE_BELOW_LONG_PCT\": 0.0,\n  \"TRADE_SIDE\": \"BUY\",\n  \"median_expectancy\": -1.3984971605179415,\n  \"median_win_rate\": 0.0,\n  \"sum_trades\": 6\n}\nBest params saved -> best_walkforward_params.json\n"
+  },
+  {
+    "SYMBOL": "ETHUSDT",
+    "INTERVAL": "3m",
+    "error": "",
+    "stdout": "Fetching 6000 candles...\nFetched 1000/6000 (16.7%)\nFetched 2000/6000 (33.3%)\nFetched 3000/6000 (50.0%)\nFetched 4000/6000 (66.7%)\nFetched 5000/6000 (83.3%)\nFetched 6000/6000 (100.0%)\n                                                            \nFetched 6000 candles.\nFolds: 3\nSaved walk-forward results -> optimize_walkforward_results.json\nBest:\n{\n  \"EMA_SHORT\": 12,\n  \"EMA_LONG\": 60,\n  \"K_SL\": 1.2,\n  \"TP_R\": 0.8,\n  \"RSI_BUY_CAP\": 60,\n  \"RSI_SELL_FLOOR\": 20,\n  \"PRICE_ABOVE_LONG_PCT\": 0.0,\n  \"PRICE_BELOW_LONG_PCT\": 0.0,\n  \"TRADE_SIDE\": \"BOTH\",\n  \"median_expectancy\": -0.7065838976930037,\n  \"median_win_rate\": 0.0,\n  \"sum_trades\": 34\n}\nBest params saved -> best_walkforward_params.json\n"
+  },
+  {
+    "SYMBOL": "ETHUSDT",
+    "INTERVAL": "5m",
+    "error": "",
+    "stdout": "Fetching 6000 candles...\nFetched 1000/6000 (16.7%)\nFetched 2000/6000 (33.3%)\nFetched 3000/6000 (50.0%)\nFetched 4000/6000 (66.7%)\nFetched 5000/6000 (83.3%)\nFetched 6000/6000 (100.0%)\n                                                            \nFetched 6000 candles.\nFolds: 3\nSaved walk-forward results -> optimize_walkforward_results.json\nBest:\n{\n  \"EMA_SHORT\": 12,\n  \"EMA_LONG\": 48,\n  \"K_SL\": 1.2,\n  \"TP_R\": 0.8,\n  \"RSI_BUY_CAP\": 60,\n  \"RSI_SELL_FLOOR\": 20,\n  \"PRICE_ABOVE_LONG_PCT\": 0.0,\n  \"PRICE_BELOW_LONG_PCT\": 0.0,\n  \"TRADE_SIDE\": \"SELL\",\n  \"median_expectancy\": -0.238378461749865,\n  \"median_win_rate\": 0.0,\n  \"sum_trades\": 27\n}\nBest params saved -> best_walkforward_params.json\n"
+  },
+  {
+    "SYMBOL": "SUIUSDT",
+    "INTERVAL": "1m",
+    "error": "",
+    "stdout": "Fetching 6000 candles...\nFetched 1000/6000 (16.7%)\nFetched 2000/6000 (33.3%)\nFetched 3000/6000 (50.0%)\nFetched 4000/6000 (66.7%)\nFetched 5000/6000 (83.3%)\nFetched 6000/6000 (100.0%)\n                                                            \nFetched 6000 candles.\nFolds: 3\nSaved walk-forward results -> optimize_walkforward_results.json\nBest:\n{\n  \"EMA_SHORT\": 16,\n  \"EMA_LONG\": 80,\n  \"K_SL\": 1.2,\n  \"TP_R\": 0.8,\n  \"RSI_BUY_CAP\": 60,\n  \"RSI_SELL_FLOOR\": 20,\n  \"PRICE_ABOVE_LONG_PCT\": 0.0,\n  \"PRICE_BELOW_LONG_PCT\": 0.0,\n  \"TRADE_SIDE\": \"BOTH\",\n  \"median_expectancy\": -1.1175264483917098,\n  \"median_win_rate\": 0.0,\n  \"sum_trades\": 19\n}\nBest params saved -> best_walkforward_params.json\n"
+  },
+  {
+    "SYMBOL": "SUIUSDT",
+    "INTERVAL": "3m",
+    "error": "",
+    "stdout": "Fetching 6000 candles...\nFetched 1000/6000 (16.7%)\nFetched 2000/6000 (33.3%)\nFetched 3000/6000 (50.0%)\nFetched 4000/6000 (66.7%)\nFetched 5000/6000 (83.3%)\nFetched 6000/6000 (100.0%)\n                                                            \nFetched 6000 candles.\nFolds: 3\nSaved walk-forward results -> optimize_walkforward_results.json\nBest:\n{\n  \"EMA_SHORT\": 20,\n  \"EMA_LONG\": 80,\n  \"K_SL\": 1.2,\n  \"TP_R\": 0.8,\n  \"RSI_BUY_CAP\": 60,\n  \"RSI_SELL_FLOOR\": 20,\n  \"PRICE_ABOVE_LONG_PCT\": 0.0,\n  \"PRICE_BELOW_LONG_PCT\": 0.0,\n  \"TRADE_SIDE\": \"SELL\",\n  \"median_expectancy\": -0.44967098431671043,\n  \"median_win_rate\": 0.0,\n  \"sum_trades\": 15\n}\nBest params saved -> best_walkforward_params.json\n"
+  },
+  {
+    "SYMBOL": "SUIUSDT",
+    "INTERVAL": "5m",
+    "error": "",
+    "stdout": "Fetching 6000 candles...\nFetched 1000/6000 (16.7%)\nFetched 2000/6000 (33.3%)\nFetched 3000/6000 (50.0%)\nFetched 4000/6000 (66.7%)\nFetched 5000/6000 (83.3%)\nFetched 6000/6000 (100.0%)\n                                                            \nFetched 6000 candles.\nFolds: 3\nSaved walk-forward results -> optimize_walkforward_results.json\nBest:\n{\n  \"EMA_SHORT\": 20,\n  \"EMA_LONG\": 80,\n  \"K_SL\": 1.2,\n  \"TP_R\": 0.8,\n  \"RSI_BUY_CAP\": 60,\n  \"RSI_SELL_FLOOR\": 20,\n  \"PRICE_ABOVE_LONG_PCT\": 0.0,\n  \"PRICE_BELOW_LONG_PCT\": 0.0,\n  \"TRADE_SIDE\": \"SELL\",\n  \"median_expectancy\": -0.2804185295796386,\n  \"median_win_rate\": 16.666666666666664,\n  \"sum_trades\": 16\n}\nBest params saved -> best_walkforward_params.json\n"
+  }
+]

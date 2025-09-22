@@ -1,0 +1,18 @@
+{
+  "EMA_SHORT": 20,
+  "EMA_LONG": 48,
+  "K_SL": 1.0,
+  "TP_R": 0.8,
+  "RSI_BUY_CAP": 60,
+  "RSI_SELL_FLOOR": 20,
+  "PRICE_ABOVE_LONG_PCT": 0.0,
+  "PRICE_BELOW_LONG_PCT": 0.0,
+  "ENABLE_PARTIAL_TP": true,
+  "PARTIAL_AT_R": 0.8,
+  "PARTIAL_SIZE_FRACTION": 0.6,
+  "PARTIAL_MOVE_BE": true,
+  "TRADE_SIDE": "SELL",
+  "median_expectancy": -0.8028914673677986,
+  "median_win_rate": 9.090909090909092,
+  "sum_trades": 26
+}
